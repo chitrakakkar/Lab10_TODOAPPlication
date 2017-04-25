@@ -27,7 +27,7 @@ router.get('/completed', function(req, res, next){
 
 
 /* Mark a task as done.Updates many task at once */
-router.post('tasks/alldone', function(req, res, next){
+router.post('/alldone', function(req, res, next){
 
     req.task_col.updateMany( {completed:false}, { $set: {completed : true}}, function(err, result) {
 
